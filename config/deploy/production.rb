@@ -1,5 +1,5 @@
 set :stage, :production
-set :branch, 'master'
+set :branch, 'main'
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -8,7 +8,7 @@ set :branch, 'master'
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-server 'yourdailyreset.com', user: 'deploy', roles: %w{app db web}
+server '159.89.163.173', user: 'deploy', roles: %w{app db web}
 
 
 

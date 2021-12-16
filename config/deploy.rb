@@ -2,7 +2,7 @@
 lock "~> 3.16.0"
 
 set :application, "yourdailyreset"
-set :repo_url, "git@bitbucket.org:kalebrdubai/yourdailyreset.git"
+set :repo_url, "git@github.com:rishad7/yourdailyreset.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
