@@ -1,0 +1,47 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="mt-16">
+      <div class="flex justify-center items-center">
+          <div class="p-8 bg-white rounded-lg max-w-6xl pb-10 grey-border">
+
+          <div class="flex flex-col">
+            <label for="user_avatar">Profile Picture</label>
+            <div class="flex justify-start items-center">
+              <div class="mr-4">
+                <%= image_tag user_avatar(resource, 112), class: "rounded-full h-28 w-28 object-cover" %>
+              </div>
+              <div>
+                <%= f.file_field :avatar, accept: "image/*" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col mt-4">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "h-12 rounded w-full border px-3 focus:text-black focus:border-blue-100" %>
+          </div>
+
+          <div class="flex flex-col mt-4">
+            <div class="flex">
+              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+            </div>
+            <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "h-12 rounded w-full border px-3 focus:text-black focus:border-blue-100" %>
+          </div>
+
+          <div class="flex flex-col mt-4">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", class: "h-12 rounded w-full border px-3 focus:text-black focus:border-blue-100" %>
+          </div>
+
+          <div class="flex flex-col mt-4">
+            <div class="flex">
+              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+            </div>
+            <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "Current Password", class: "h-12 rounded w-full border px-3 focus:text-black focus:border-blue-100" %>
+          </div>
+
+          <%= f.submit "Update", class: "uppercase h-12 mt-4 text-white w-full rounded ai-bg-blue cursor-pointer" %>
+          </div>
+      </div>
+  </div>
+<% end %>
